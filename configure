@@ -17974,7 +17974,7 @@ x$ax_compare_version_B" | sed 's/^ *//' | sort -r | sed "s/x${ax_compare_version
 
 
     if test "$ax_compare_version" = "true" ; then
-    CXXFLAGS="$CXXFLAGS -Wno-c++0x-compat"
+    CXXFLAGS="$CXXFLAGS -Wno-c++0x-compat -std=gnu++98"
       fi
 
 fi
