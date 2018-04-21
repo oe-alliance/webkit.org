@@ -1029,7 +1029,7 @@ static int webkit_go( gpointer param )
 static int webkit_redraw( gpointer param )
 {
 	LOG_TRACE( " >>>> REDRAW!!!" );
-	gtk_widget_queue_draw_area( _webView, 0, 0, 1280, 720 );
+	gtk_widget_queue_draw_area( _webView, 0, 0, width ? width : 1280, height ? height : 720 );
 	LOG_TRACE( " <<<< REDRAW!!!" );
 	return FALSE;
 }
