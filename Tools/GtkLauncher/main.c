@@ -114,7 +114,9 @@ static void notifyLoadStatusCb(WebKitWebView* webView, GParamSpec* pspec, GtkWid
     	break;
     case WEBKIT_LOAD_FINISHED:
     case WEBKIT_LOAD_FAILED:
-    	break;
+        gtk_spinner_stop(GTK_SPINNER(spinner));
+        gtk_widget_hide_all(spinner_window);
+        break;
     }
 #else
 	if (webkit_web_view_get_load_status(webView) == WEBKIT_LOAD_COMMITTED) {
