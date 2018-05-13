@@ -304,6 +304,11 @@
 #define WTF_CPU_NEEDS_ALIGNED_ACCESS 1
 #endif
 
+/* CPU(AARCH64) - Aarch64 */
+#if defined(__aarch64__)
+#define WTF_CPU_AARCH64 1
+#endif
+
 /* ==== OS() - underlying operating system; only to be used for mandated low-level services like 
    virtual memory, not to choose a GUI toolkit ==== */
 
@@ -936,7 +941,8 @@
     || CPU(ALPHA) \
     || CPU(SPARC64) \
     || CPU(S390X) \
-    || CPU(PPC64)
+    || CPU(PPC64) \
+    || CPU(AARCH64)
 #define WTF_USE_JSVALUE64 1
 #else
 #define WTF_USE_JSVALUE32_64 1
