@@ -234,3 +234,5 @@ typedef float CGFloat;
 #if PLATFORM(WIN) && HAVE(AVCF)
 #define WTF_USE_AVFOUNDATION 1
 #endif
+
+#define LIBSOUP_USE_UNSTABLE_REQUEST_API
