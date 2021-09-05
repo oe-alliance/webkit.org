@@ -60,7 +60,7 @@ bool SegmentedFontData::containsCharacters(const UChar* characters, int length) 
 {
     UChar32 c;
     for (int i = 0; i < length; ) {
-        U16_NEXT(characters, i, length, c)
+        U16_NEXT(characters, i, length, c);
         if (!containsCharacter(c))
             return false;
     }
