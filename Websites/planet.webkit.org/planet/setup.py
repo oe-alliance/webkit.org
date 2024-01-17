@@ -2,7 +2,7 @@
 """The Planet Feed Aggregator"""
 
 import os
-from distutils.core import setup
+from setuptools import setup
 
 from planet import __version__ as VERSION
 from planet import __license__ as LICENSE
